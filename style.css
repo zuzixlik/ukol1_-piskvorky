@@ -1,3 +1,89 @@
-* {
+html {
   box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+/*.body {
+  background-image: linear-gradient(#615dad, #ffc8da);
+  background-size: cover;
+  background-repeat: no-repeat;
+} nefungovalo */
+
+html {
+  background-image: linear-gradient(#615dad, #ffc8da);
+  min-height: -webkit-fill-available;
+}
+
+.kontejner {
+  display: block;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: black;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px;
+  align-self: center;
+  align-items: center;
+  width: 200px;
+  height: 600px;
+  position: relative;
+  position: 50px;
+  margin: auto;
+}
+
+.body {
+  flex-grow: 1;
+}
+
+.obrazek {
+  position: 0px;
+  flex-wrap: initial;
+  order: 1;
+  display: block;
+  align-self: center;
+  max-inline-size: 100%;
+}
+
+.main {
+  flex-grow: 1;
+  order: 2;
+  background-color: #283e50;
+  display: block;
+  display: flex;
+  padding: 15px 10px;
+  flex-direction: column;
+}
+
+.nazev {
+  flex-grow: 1;
+  background-color: #283e50;
+}
+.popis {
+  flex-grow: 1;
+  align-self: center;
+}
+.pravidla {
+  flex-grow: 1;
+  order: 3;
+  background-color: #1fcca4;
+  background-color: #283e50;
+  max-inline-size: 100%;
+}
+:hover .pravidla {
+  color: #1cbb96;
+}
+
+.hrat {
+  flex-grow: 1;
+  order: 4;
+  background-color: #0197f6;
+  max-inline-size: 100%;
+}
+:hover .hrat {
+  color: #0090e9;
 }
