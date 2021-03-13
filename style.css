@@ -64,6 +64,7 @@ html {
   text-align: center;
   font-family: 'Lobster', cursive;
   font-weight: lighter;
+  margin: auto;
 }
 .popis {
   flex-grow: 1;
@@ -103,7 +104,7 @@ a:hover.pravidla {
   text-decoration: none;
   padding: 20px;
   color: white;
-  border-top: #283e50 3px solid;
+  border-top: #283e50 1px solid;
 }
 a:hover.hrat {
   background-color: #0090e9;
