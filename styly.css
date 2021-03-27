@@ -19,7 +19,7 @@ head {
 body {
   color: white;
   padding: 20px;
-  width: 35%;
+  width: 320px;
   margin: auto;
 }
 
@@ -40,8 +40,12 @@ main {
   padding: 15px 10px;
   flex-direction: column;
   padding: 20px;
+  width: 320px;
 }
 
+nav {
+  width: 320px;
+}
 .odkazy--stranky {
   flex-grow: initial;
   order: 3;
@@ -104,6 +108,9 @@ a:hover.hrat--stranka {
     width: 30%;
   }
   main {
+    width: 500px;
+  }
+  nav {
     width: 500px;
   }
 }
