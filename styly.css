@@ -4,6 +4,7 @@ html {
   background-image: linear-gradient(#615dad, #ffc8da);
   min-height: -webkit-fill-available;
   color: white;
+  font-family: system-ui;
 }
 
 *,
@@ -18,8 +19,9 @@ head {
 
 body {
   color: white;
-  padding: 20px;
-  width: 320px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 300px;
   margin: auto;
 }
 
@@ -40,15 +42,14 @@ main {
   padding: 15px 10px;
   flex-direction: column;
   padding: 20px;
-  width: 320px;
+  width: 300px;
 }
 
 nav {
-  width: 320px;
+  width: 300px;
 }
 .odkazy--stranky {
   flex-grow: initial;
-  order: 3;
   flex-direction: column;
   display: flex;
   align-self: stretch;
@@ -97,6 +98,23 @@ a:hover.hrat--stranka {
 .vycet--obrazek {
   display: flex;
   flex-direction: column;
+  font-family: system-ui;
+  font-style: italic;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.7rem;
+  font-family: sans-serif;
+}
+figure {
+  margin: auto;
+  padding: 15px;
+}
+
+ol li {
+  margin-left: 10px;
+  padding: 5px;
 }
 
 @media (min-width: 540px) {
@@ -105,12 +123,25 @@ a:hover.hrat--stranka {
     flex-wrap: wrap;
   }
   figure {
-    width: 30%;
+    width: 50%;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   main {
     width: 500px;
   }
   nav {
     width: 500px;
+  }
+
+  body {
+    width: 500px;
+  }
+
+  ol li {
+    margin-left: 10px;
+    padding: 5px;
   }
 }
