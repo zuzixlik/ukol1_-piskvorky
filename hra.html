@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Začít hrát blablab</title>
+    <title>Začít hrát</title>
     <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,35 +15,39 @@
     />
   </head>
 
-  <body>
-    <h1>Piškvorky</h1>
+  <body class="body--hra">
+    <h1 class="nazev--hra">Piškvorky</h1>
 
-    <section class="kontejner">
-      <div class="hraci_pole">
-        <div class="kontejner_ikon">
-          <div class="leve_ikon">
+    <section class="hra--kontejner">
+      <div class="hra--navigace">
+        <div class="hra--navigace-ikon">
+          <div class="navigace-ikon-leva">
             <div>HRAJE:</div>
             <img
+              class="hra--circle"
               src="https://github.com/Czechitas-podklady-WEB/Ukol-Piskvorky-2/raw/main/podklady/circle.svg"
               alt="circle"
             />
           </div>
 
-          <div class="prave_ikon">
+          <div class="navigace-ikon-prava">
             <a href="index.html"
-              ><img class="ikon_home" src="obrazky/circle.svg" alt="home"
+              ><img
+                class="navigace-ikon-prava-home"
+                src="obrazky/podklady/home.svg"
+                alt="home"
             /></a>
 
             <a href="hra.html"
               ><img
-                class="ikon_restart"
+                class="navigace-ikon-prava-restart"
                 src="obrazky/podklady/restart.svg"
                 alt="restart"
             /></a>
           </div>
         </div>
 
-        <div class="hlavni--obsah">
+        <div class="hra--hlavni--obsah">
           <button></button>
           <button></button>
           <button></button>
