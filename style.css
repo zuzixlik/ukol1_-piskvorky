@@ -32,7 +32,7 @@ html {
   flex-grow: 1;
 }
 
-.obrazek {
+.obrazek1 {
   border-radius: 8px 8px 0 0;
   position: 0px;
   flex-wrap: initial;
@@ -40,6 +40,8 @@ html {
   display: block;
   align-self: center;
   max-inline-size: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .main {
