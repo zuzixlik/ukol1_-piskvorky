@@ -89,7 +89,8 @@ html {
   color: white;
 }
 
-a:hover.pravidla1 {
+a.pravidla1:hover,
+:focus {
   background-color: #1cbb96;
 }
 .hrat1 {
@@ -102,7 +103,8 @@ a:hover.pravidla1 {
   color: white;
   border-top: #283e50 1px solid;
 }
-a:hover.hrat1 {
+a.hrat1:hover,
+:focus {
   background-color: #0090e9;
 }
 /*----------pravidla------------------------*/
