@@ -322,3 +322,19 @@ button {
 .body--hra {
   max-width: 80vmin;
 }
+
+/*-------------nastylovani tridy po kliknuti-stylovani pro Java Script, kdyz se zmeni trida*/
+
+.policko_hraje_kolecko {
+  background-image: url('obrazky/circle.svg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.policko_hraje_krizek {
+  background-image: url('obrazky/cross.svg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
