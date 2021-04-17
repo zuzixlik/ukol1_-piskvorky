@@ -158,7 +158,8 @@ h1,
   padding: 20px;
   color: white;
 }
-a:hover.uvodni--stranka {
+a:hover.uvodni--stranka,
+.navigace-ikon-prava-home {
   background-color: #1cbb96;
 }
 
@@ -290,12 +291,14 @@ ol li {
 .navigace-ikon-prava-home {
   background-color: #1fcca4;
   border-radius: 3px;
-  padding: 8px 6px;
+  padding: 15px 10px 6px 10px;
 }
+
 .navigace-ikon-prava-restart {
   background-color: #0197f6;
   border-radius: 3px;
-  padding: 8px 6px;
+  padding: 15px 10px 6px 10px;
+  margin: auto;
 }
 
 .hra--hlavni--obsah {
@@ -337,4 +340,24 @@ button {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center center;
+}
+/*-dodelavky opravy*/
+.policko:hover {
+  background-color: gray;
+}
+
+:focus {
+  background-color: gray;
+}
+
+a:hover.navigace-ikon-prava-restart {
+  background-color: #0090e9;
+}
+
+a:hover.navigace-ikon-prava-home {
+  background-color: #1cbb96;
+}
+
+.nazev--hra {
+  font-size: 50px;
 }
