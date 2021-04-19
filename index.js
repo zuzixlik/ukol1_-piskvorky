@@ -20,60 +20,34 @@ const rozehrano = (e) => {
   }
 };
 
-const pole = document.querySelectorAll('.hra--hlavni--obsah');
+const pole = document.querySelectorAll('.policko');
 for (let i = 0; i < pole.length; i++) {
   pole[i].addEventListener('click', rozehrano);
 }
 
 /*ukol c5*/
+
+/*Pro detekci výherního tahu budeš potřebovat několik pomocných funkcí.*/
+
 const hraHlavniObsahSize = 10; // 10x10
 
-const getPosition = (policko) => {
-  let polickoIndex = 0;
-  while (polickoIndex < HrajeElm.length) {
-    if (policko === HrajeElm[polickoIndex]) {
+const getPosition = (e) => {
+  let eIndex = 0;
+  while (eIndex < pole.length) {
+    if (e === pole[eIndex]) {
       break;
     }
-    polickoIndex++;
+    eIndex++;
   }
   return {
-    row: Math.floor(polickoIndex / hraHlavniObsahSize),
-    column: polickoIndex % hraHlavniObsahSize,
+    row: Math.floor(eIndex / hraHlavniObsahSize),
+    column: eIndex % hraHlavniObsahSize,
   };
 };
 
-/*Pro detekci výherního tahu budeš potřebovat několik pomocných funkcí.
-
-const field = [{ row: 0, column: 0 }];
-
-console.log(getPosition(nejakyButtonElement));
-
-const hraHlavniObsahSize = 10; // 10x10
-const hraHlavniObsah = document.querySelectorAll('.policko'); // Selektor pozměň tak, aby odpovídal tvému kódu.
-const getPosition = (policko) => {
-  let polickoIndex = 0;
-  while (polickoIndex < hraHlavniObsah.length) {
-    if (policko === hraHlavniObsah[polickoIndex]) {
-      break;
-    }
-    polickoIndex++;
-  }
-  return {
-    row: Math.floor(polickoIndex / hraHlavniObsahSize),
-    column: polickoIndex % hraHlavniObsahSize,
-  };
-};
-
-console.log(getPosition('policko'));
+console.log(getPosition(pole[65]));
 
 const handleClick = () => {
-  console.log(getPosition('policko'));
+  console.log(getPosition('pole[?]'));
 };
 document.addEventListener('click', handleClick);
-
-/*
-const getField = (row, column) => {
-  hraHlavniObsah[row * hraHlavniObsahSize + column];
-};
-
-console.log(getField);*/
