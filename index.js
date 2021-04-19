@@ -47,7 +47,72 @@ const getPosition = (e) => {
 
 console.log(getPosition(pole[65]));
 
-const handleClick = () => {
-  console.log(getPosition('pole[?]'));
+const handleClick = (e) => {
+  console.log(getPosition(e.target));
 };
 document.addEventListener('click', handleClick);
+
+const getField = (row, column) => pole[row * hraHlavniObsahSize + column];
+
+const getSymbol = (e) => {
+  // Název třídy přizpůsob tvému kódu.
+  if (e.classList.contains('policko_hraje_krizek')) {
+    return 'cross';
+  } else if (e.classList.contains('policko_hraje_kolecko')) {
+    return 'circle';
+  }
+};
+
+const symbolsToWin = 5;
+const isWinningMove = (e) => {
+  const origin = getPosition(e);
+  const symbol = getSymbol(e);
+
+  let i;
+
+  let inRow = 1; // Jednička pro právě vybrané políčko
+  // Koukni doleva
+  i = origin.column;
+  while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
+    inRow++;
+    i--;
+  }
+
+  // Koukni doprava
+  i = origin.column;
+  while (
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(origin.row, i + 1))
+  ) {
+    inRow++;
+    i++;
+  }
+
+  if (inRow >= symbolsToWin) {
+    return true;
+  }
+
+  let inColumn = 1;
+  // Koukni nahoru
+  i = origin.row;
+  while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
+    inColumn++;
+    i--;
+  }
+
+  // Koukni dolu
+  i = origin.row;
+  while (
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(i + 1, origin.column))
+  ) {
+    inColumn++;
+    i++;
+  }
+
+  if (inColumn >= symbolsToWin) {
+    return true;
+  }
+
+  return false;
+};
