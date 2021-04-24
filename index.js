@@ -1,7 +1,5 @@
 'Use strict';
 
-console.log('Funguji');
-
 let tedHraje = 'circle';
 
 const HrajeElm = document.querySelector('.hra--circle');
@@ -17,6 +15,22 @@ const rozehrano = (e) => {
     e.target.disabled = true;
     HrajeElm.src = 'obrazky/circle.svg';
     tedHraje = 'circle';
+  }
+  e.target.disabled = true;
+  const winning = isWinningMove(e.target);
+
+  if (winning === true && getSymbol(e.target) === 'circle') {
+    let hlaska1 = `Toto kolo zvítězil kroužek`;
+    setTimeout(() => {
+      alert(hlaska1);
+      location.href = 'hra.html';
+    }, 200);
+  } else if (winning === true && getSymbol(e.target) === 'cross') {
+    let hlaska2 = `Toto kolo zvítězil křížek`;
+    setTimeout(() => {
+      alert(hlaska2);
+      location.href = 'hra.html';
+    }, 200);
   }
 };
 
@@ -45,13 +59,6 @@ const getPosition = (e) => {
   };
 };
 
-console.log(getPosition(pole[65]));
-
-const handleClick = (e) => {
-  console.log(getPosition(e.target));
-};
-document.addEventListener('click', handleClick);
-
 const getField = (row, column) => pole[row * hraHlavniObsahSize + column];
 
 const getSymbol = (e) => {
@@ -67,6 +74,7 @@ const symbolsToWin = 5;
 const isWinningMove = (e) => {
   const origin = getPosition(e);
   const symbol = getSymbol(e);
+  const boardSize = hraHlavniObsahSize;
 
   let i;
 
